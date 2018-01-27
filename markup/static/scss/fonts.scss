@@ -1,0 +1,16 @@
+/* Your custom fonts here */
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../fonts/OswaldRegular.woff') format('woff'), url('../fonts/OswaldRegular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+  font-family:	'Oswald';
+  src: url('../fonts/OswaldMedium.woff') format('woff'),
+       url('../fonts/OswaldMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}

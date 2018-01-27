@@ -1,0 +1,14 @@
+{
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "lost": "latest",
+        "bemto.pug": "latest",
+        "stylelint": "latest",
+        "stylelint-scss": "latest",
+        "stylelint-config-htmlacademy": "latest",
+        "postcss-scss": "latest",
+        "postcss-reporter": "latest"
+    }
+}

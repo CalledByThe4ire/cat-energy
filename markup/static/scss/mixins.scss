@@ -1,0 +1,87 @@
+// Mixins.
+
+@mixin nl {
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+	list-style: none;
+	list-style-position: outside;
+}
+
+@mixin cf {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.lt-ie8 & {
+		zoom: 1;
+	}
+}
+
+@mixin blocks-justify {
+	text-align: justify;
+	text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+@mixin size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin margin-x($margin) {
+	margin-right: $margin;
+	margin-left: $margin;
+}
+
+@mixin margin-y($margin) {
+	margin-top: $margin;
+	margin-bottom: $margin;
+}
+
+@mixin padding-x($padding) {
+	padding-right: $padding;
+	padding-left: $padding;
+}
+
+@mixin padding-y($padding) {
+	padding-top: $padding;
+	padding-bottom: $padding;
+}
+
+@mixin container-size($container, $offset) {
+	width: $container;
+
+	@include padding-x($offset);
+}
+
+@mixin container() {
+	margin: 0 auto;
+
+	@include container-size($container--min, $offset--mobile);
+
+	@media #{$tablet} {
+		@include container-size($container--mid, $offset--tablet);
+	}
+
+	@media #{$desktop} {
+		@include container-size($container--max, $offset--desktop);
+	}
+}
+
+@mixin container-fluid() {
+	margin: 0 auto;
+	width: 100%;
+}
+
+@mixin list-clear() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

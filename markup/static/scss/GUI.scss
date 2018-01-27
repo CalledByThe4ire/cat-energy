@@ -1,0 +1,44 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+// Images
+//
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+}
+
+// Links
+//
+a {
+    text-decoration: none;
+    color: $link-color;
+    background-color: transparent;
+
+    &:link,
+    &:visited {
+        text-decoration: underline;
+        color: $link-color;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $link-color--hover;
+        transition-duration: .3s;
+    }
+
+    &:active {
+        text-decoration: underline;
+        color: rgba($link-color--hover, 0.3);
+        transition-duration: 0s;
+    }
+}
+
+// Tables
+//
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}

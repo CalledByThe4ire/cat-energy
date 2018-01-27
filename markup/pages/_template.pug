@@ -1,0 +1,16 @@
+include ../static/pug/plugins/bemto/bemto-settings.pug
+include ../components/page/page.pug
+
+block variables
+	- bodyClass = '';
+
+doctype html
+html(class="no-js", lang="ru")
+	include ../components/head/head.pug
+	+page(class=bodyClass)
+		block content
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%%=min=%.js')
