@@ -55,23 +55,19 @@
 	padding-bottom: $padding;
 }
 
-@mixin container-size($container, $offset) {
-	width: $container;
-
-	@include padding-x($offset);
-}
-
 @mixin container() {
 	margin: 0 auto;
 
-	@include container-size($container--min, $offset--mobile);
+	@include padding-x($offset--mobile);
+	min-width: $container--min;
+	max-width: $container--max;
 
 	@media #{$tablet} {
-		@include container-size($container--mid, $offset--tablet);
+		@include padding-x($offset--tablet);
 	}
 
 	@media #{$desktop} {
-		@include container-size($container--max, $offset--desktop);
+		@include padding-x($offset--desktop);
 	}
 }
 
