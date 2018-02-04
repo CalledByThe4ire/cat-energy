@@ -1,3 +1,14 @@
+include ../main-nav/main-nav.pug
+
 mixin page-header(data)
-	+b('div').page-header&attributes(attributes)
-		block
+	+b('header').page-header&attributes(attributes)
+		+e(a).logo(href='/')
+			picture
+				source(media='only screen and (min-width: 1150px)', srcset='%=static=%img/assets/page-header/page-header__logo--mod--desktop.svg')
+				source(media='only screen and (min-width: 768px)', srcset='%=static=%img/assets/page-header/page-header__logo--mod--tablet.svg')
+				img(src='%=static=%img/assets/page-header/page-header__logo--mod--mobile.svg', width='33', height='38', alt='Cat Energy')
+		+e('h1').title
+			img(src='%=static=%img/assets/page-header/page-header__title.svg', width='101', height='18', alt='Cat Energy')
+		+main-nav(data)
+
+

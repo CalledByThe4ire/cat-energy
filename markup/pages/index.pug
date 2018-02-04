@@ -1,8 +1,17 @@
-extends ./_template.pug
+extends _template.pug
+include ../components/page-header/page-header.pug
 
 block head
 	- pageTitle = 'Cat Energy';
 
 block content
 	| %=symbols=%
-
+	-
+		const activePage = {
+			main: {
+				href: './index.html',
+				title: 'Главная',
+				isActive: true,
+				}
+			}
+	+page-header(Object.assign(siteList, activePage))

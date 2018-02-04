@@ -1,0 +1,10 @@
+mixin site-list(data)
+	+b('ul').site-list&attributes(attributes)
+		each item in data
+			+e('li').item(class=`${item.isActive ? '--active' : ''}`)
+				if item.isActive
+					a !{item.title}
+				else
+					a(href=item.href) !{item.title}
+
+

@@ -1,0 +1,7 @@
+include ../site-list/site-list.pug
+
+mixin main-nav(data)
+	+b('nav').main-nav--opened&attributes(attributes)
+		+e('button')(type='button').trigger
+			span
+		+site-list(data)(class='__list')

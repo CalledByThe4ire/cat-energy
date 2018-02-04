@@ -1,0 +1,28 @@
+.site-list {
+	@include list-clear();
+
+	font-weight: 500;
+
+	background-color: rgba(#ffffff, 0.9);
+}
+
+.site-list__item {
+	font-size: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: lighten($color-primary, 80%);
+
+	& a {
+		display: block;
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+	}
+
+	& a:not([href]) {
+		color: $link-color;
+	}
+}
