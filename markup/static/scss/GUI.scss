@@ -24,14 +24,19 @@ a {
 		color: $link-color;
 	}
 
-	&:hover {
+	&[href]:hover {
 		color: $link-color--hover;
 		transition-duration: 0.3s;
 	}
 
-	&:active {
+	&[href]:active {
 		color: rgba($link-color--hover, 0.3);
 		transition-duration: 0s;
+	}
+
+	&:not([href]) {
+		color: $link-color;
+		cursor: default;
 	}
 }
 

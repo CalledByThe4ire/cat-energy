@@ -1,9 +1,14 @@
 .site-list {
 	@include list-clear();
-
 	font-weight: 500;
-
 	background-color: rgba(#ffffff, 0.9);
+
+	@media #{$tablet} {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		min-height: 58px;
+	}
 }
 
 .site-list__item {
@@ -16,13 +21,72 @@
 	border-bottom-style: solid;
 	border-bottom-color: lighten($color-primary, 80%);
 
+	@media #{$tablet} {
+		display: flex;
+		align-items: center;
+		padding-right: 4rem;
+
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		font-weight: 400;
+
+		border-bottom-width: initial;
+		border-bottom-style: initial;
+		border-bottom-color: initial;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	@media #{$desktop} {
+		padding-right: 3.5rem;
+		font-size: 2rem;
+	}
+
 	& a {
 		display: block;
 		padding-top: 2.5rem;
 		padding-bottom: 2rem;
+
+		white-space: nowrap;
+
+		@media #{$tablet} {
+			padding-top: 1rem;
+			padding-bottom: initial;
+		}
+
+		@media #{$desktop} {
+			color: #ffffff;
+
+			&[href]:hover {
+				color: rgba(#ffffff, 0.6);
+				transition-duration: 0.3s;
+			}
+
+			&[href]:active {
+				color: rgba(#ffffff, 0.3);
+				transition-duration: 0s;
+			}
+		}
 	}
 
 	& a:not([href]) {
-		color: $link-color;
+		@media #{$tablet} {
+			line-height: 3.5rem;
+
+			&::after {
+				content: "";
+
+				display: block;
+				height: 2px;
+
+				background-color: $color-secondary;
+
+				@media #{$desktop} {
+					background-color: #ffffff;
+				}
+			}
+		}
 	}
 }
