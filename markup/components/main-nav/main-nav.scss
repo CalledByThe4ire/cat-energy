@@ -79,6 +79,8 @@
 
 		background-color: #000000;
 
+		pointer-events: none;
+
 		&::before,
 		&::after {
 			content: "";
