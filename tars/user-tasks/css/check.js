@@ -14,22 +14,8 @@ const cssPathesToLint = [].concat.apply([], [
     `!./markup/${tars.config.fs.componentsFolderName}/**/_*.scss`,
 ]);
 
-const stylelintConfig = {
-    'extends': 'stylelint-config-htmlacademy',
-    'plugins': [
-        'stylelint-scss'
-    ],
-    'rules': {
-        'indentation': 'tab',
-        'number-leading-zero': null,
-        'at-rule-no-unknown': [true, {
-            ignoreAtRules: ['extend', 'at-root', 'debug', 'warn', 'error', 'if', 'else', 'for', 'each', 'while', 'mixin', 'include', 'content', 'return', 'function']
-        }]
-    }
-};
-
 const processors = [
-    stylelint(stylelintConfig),
+    stylelint(),
     reporter({
         clearAllMessages: true,
         throwError: true
