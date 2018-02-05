@@ -30,7 +30,7 @@ $desktop: "only screen and (min-width: 1150px)" !default;
 //
 $container--min: 320px !default;
 $container--mid: 768px !default;
-$container--max: 1150px !default;
+$container--max: 1440px !default;
 // == retina-specific stuff
 //
 $retina-dpi: 144dpi !default;
@@ -41,5 +41,5 @@ $retina-mq: "(min-resolution: #{$retina-dpi}), (min-resolution: #{$retina-dppx})
 //
 $offset--mobile: 20px !default;
 $offset--tablet: 30px !default;
-$offset--desktop: 40px !default;
+$offset--desktop: 110px !default;
 
