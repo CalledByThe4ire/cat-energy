@@ -7,7 +7,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		min-height: 58px;
 	}
 }
 
@@ -24,7 +23,7 @@
 	@media #{$tablet} {
 		display: flex;
 		align-items: center;
-		padding-right: 4rem;
+		margin-right: 4rem;
 
 		font-size: 1.8rem;
 		line-height: 2.4rem;
@@ -52,8 +51,7 @@
 		white-space: nowrap;
 
 		@media #{$tablet} {
-			padding-top: 1rem;
-			padding-bottom: initial;
+			padding-bottom: 1rem;
 		}
 
 		@media #{$desktop} {
@@ -73,12 +71,15 @@
 
 	& a:not([href]) {
 		@media #{$tablet} {
-			line-height: 3.5rem;
+			position: relative;
 
 			&::after {
 				content: "";
+				position: absolute;
+				bottom: 0;
 
 				display: block;
+				width: 100%;
 				height: 2px;
 
 				background-color: $color-secondary;
