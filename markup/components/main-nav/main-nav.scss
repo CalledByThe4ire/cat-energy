@@ -4,6 +4,26 @@
 			& .main-nav__trigger {
 				& span {
 					display: block;
+
+					&::before {
+						top: -8px;
+					}
+
+					&::after {
+						bottom: -8px;
+					}
+				}
+			}
+
+			& .site-list__item {
+				display: none;
+			}
+		}
+
+		&--opened {
+			& .main-nav__trigger {
+				& span {
+					display: block;
 					background: none;
 
 					&::before {
@@ -18,26 +38,6 @@
 
 			& .site-list__item {
 				display: block;
-			}
-		}
-
-		&--opened {
-			& .main-nav__trigger {
-				& span {
-					display: block;
-
-					&::before {
-						top: -8px;
-					}
-
-					&::after {
-						bottom: -8px;
-					}
-				}
-			}
-
-			& .site-list__item {
-				display: none;
 			}
 		}
 
