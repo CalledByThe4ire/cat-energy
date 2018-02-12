@@ -1,5 +1,6 @@
 extends _template.pug
 include ../components/page-header/page-header.pug
+include ../components/container/container.pug
 
 block head
 	- pageTitle = 'Cat Energy';
@@ -14,4 +15,5 @@ block content
 				isActive: true,
 				}
 			}
-	+page-header(Object.assign(siteList, activePage))
+	+container
+		+page-header(Object.assign(siteList, activePage))

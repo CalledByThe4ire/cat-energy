@@ -1,16 +1,12 @@
 .page-header {
 	position: relative;
 
-	@include container();
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	min-height: 65px;
 
 	background-color: #ffffff;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: lighten($color-primary, 80%);
 
 	@media #{$tablet} {
 		min-height: initial;
