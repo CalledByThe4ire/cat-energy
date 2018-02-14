@@ -8,9 +8,11 @@
 
 	background-color: #ffffff;
 
+	outline: 1px dashed green;
+
 	@media #{$tablet} {
 		min-height: initial;
-		margin-top: 2.4rem;
+		padding-top: 2.4rem;
 
 		border-bottom-width: initial;
 		border-bottom-style: initial;
@@ -22,7 +24,7 @@
 	}
 
 	@media #{$desktop} {
-		margin-top: 5.4rem;
+		padding-top: 5.4rem;
 	}
 }
 
