@@ -1,26 +1,9 @@
 .page-header {
 	position: relative;
 
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	min-height: 65px;
-
-	background-color: #ffffff;
-
-	outline: 1px dashed green;
-
 	@media #{$tablet} {
 		min-height: initial;
 		padding-top: 2.4rem;
-
-		border-bottom-width: initial;
-		border-bottom-style: initial;
-		border-bottom-color: initial;
-
-		& .main-nav {
-			margin-left: auto;
-		}
 	}
 
 	@media #{$desktop} {
@@ -28,7 +11,33 @@
 	}
 }
 
+.page-header__container {
+	@include container();
+}
+
+.page-header__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 66px;
+
+	@media #{$tablet} {
+		justify-content: space-between;
+		min-height: 58px;
+	}
+
+	@media #{$desktop} {
+		min-height: 59px;
+	}
+}
+
 .page-header__logo {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	font-size: 0;
+
 	& img {
 		@media #{$tablet} {
 			width: 173px;
@@ -55,8 +64,6 @@
 
 .page-header__title {
 	display: none;
-	padding: 0;
-	margin: 0;
 
 	@include margin-x(auto);
 

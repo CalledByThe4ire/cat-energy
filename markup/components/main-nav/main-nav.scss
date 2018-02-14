@@ -52,6 +52,10 @@
 			}
 		}
 	}
+
+	@media #{$desktop} {
+		flex-basis: calc(50% - 13rem);
+	}
 }
 
 .main-nav__trigger {

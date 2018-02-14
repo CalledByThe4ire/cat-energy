@@ -1,12 +1,14 @@
 .site-list {
 	@include list-clear();
-	font-weight: 500;
-	background-color: rgba(#ffffff, 0.9);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 
-	@media #{$tablet} {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	font-weight: 500;
+
+	@media #{$mobile} {
+		display: block;
+		background-color: rgba(#ffffff, 0.9);
 	}
 }
 
@@ -42,12 +44,12 @@
 		border-bottom-color: initial;
 
 		&:last-child {
-			padding-right: 0;
+			margin-right: 0;
 		}
 	}
 
 	@media #{$desktop} {
-		padding-right: 3.5rem;
+		margin-right: 3.5rem;
 		font-size: 2rem;
 	}
 
