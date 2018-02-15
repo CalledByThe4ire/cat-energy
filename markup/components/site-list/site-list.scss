@@ -17,14 +17,6 @@
 	border-bottom-style: solid;
 	border-bottom-color: lighten($color-primary, 80%);
 
-	@media #{$mobile} {
-		&:first-child {
-			border-top-width: 1px;
-			border-top-style: solid;
-			border-top-color: lighten($color-primary, 80%);
-		}
-	}
-
 	@media #{$tablet} {
 		display: flex;
 		align-items: center;
