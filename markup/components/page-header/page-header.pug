@@ -1,4 +1,5 @@
 include ../main-nav/main-nav.pug
+include ../food-choice/food-choice.pug
 
 mixin page-header(data)
 	+b('header').page-header&attributes(attributes)
@@ -13,5 +14,6 @@ mixin page-header(data)
 				+e('span').title
 					img(src='%=static=%img/assets/page-header/page-header__title.svg', width='101', height='18', alt='Перейти на главную страницу сайта Cat Energy')
 				+main-nav(data)
+			+food-choice(foodChoice)
 
 

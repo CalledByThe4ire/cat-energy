@@ -2,9 +2,9 @@ include ../button/button.pug
 
 mixin food-choice(data)
 	+b('section').food-choice&attributes(attributes)
-    +e('header').heading
-      +e('h2').title !{data.title}
-      +e('p').tagline !{data.tagline}
-    +button(class='__button')
-      |  !{data.btnTitle}
+	+e('header').heading
+		+e('h2').title !{data.title}
+		+e('p').tagline !{data.tagline}
+	+button(class='__button')
+		| !{data.btnTitle}
 
