@@ -36,6 +36,11 @@
 				}
 			}
 
+			& .site-list {
+				display: block;
+				background-color: rgba(#ffffff, 0.9);
+			}
+
 			& .site-list__item {
 				display: block;
 			}
