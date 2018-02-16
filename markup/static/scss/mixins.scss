@@ -76,6 +76,25 @@
 	width: 100%;
 }
 
+@mixin retina-background($componentName, $image, $ext: "png") {
+	background-image: url("%=static=%/assets/#{$componentName}/" + $image + "." + $ext);
+
+	@media only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx) {
+		background-image: url("%=static=%/assets/#{$componentName}/" + $image + "@2x." + $ext);
+	}
+
+	@media only screen and (min-resolution: 288dpi),
+		only screen and (min-resolution: 3dppx) {
+		background-image: url("%=static=%/assets/#{$componentName}/" + $image + "@2x." + $ext);
+	}
+
+	@media only screen and (min-resolution: 384dpi),
+		only screen and (min-resolution: 4dppx) {
+		background-image: url("%=static=%/assets/#{$componentName}/" + $image + "@2x." + $ext);
+	}
+}
+
 @mixin list-clear() {
 	margin: 0;
 	padding: 0;
